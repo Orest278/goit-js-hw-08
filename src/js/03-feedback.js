@@ -36,12 +36,10 @@ const submitHandler = e => {
         email: emailValue,
         message: messsagValue,
     };
+    console.log(state);
     clearStatrFromLocalStoreg();
-    emailInput.value = ``;
-    messageInput.value = ``;
+    form.reset();
 };
 
 form.addEventListener('input', throttle(saveFormState, 500));
 form.addEventListener('submit', submitHandler);
-
-restoreStateFromLocalStoreg();
