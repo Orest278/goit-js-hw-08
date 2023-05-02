@@ -43,3 +43,5 @@ const submitHandler = e => {
 
 form.addEventListener('input', throttle(saveFormState, 500));
 form.addEventListener('submit', submitHandler);
+
+restoreStateFromLocalStoreg();
